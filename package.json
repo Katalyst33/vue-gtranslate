@@ -4,5 +4,6 @@
   "description": "gtranslaten plugin for vue js",
   "main": "index.js",
   "author": "katalyst",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/Katalyst33/vue-gtranslate.git"
 }
