@@ -24,7 +24,7 @@
                        title="English">
                     <span class="language-item">
                         <img alt="Chinese" class="flag"
-                             src="/img/flags/china.png"/>
+                             src="/public/img/flags/china.png"/>
                       <span class="is-size-6 pl-3">Chinese (Simplified)</span>
                     </span>
                     </a>
@@ -34,7 +34,7 @@
                        title="English">
                     <span class="language-item">
                         <img alt="Chinese(Traditional)" class="flag"
-                             src="/img/flags/china-traditional.png"/>
+                             src="/public/img/flags/china-traditional.png"/>
                       <span class="is-size-6 pl-3">Chinese(Traditional)</span>
                     </span>
                     </a>
@@ -44,7 +44,7 @@
                        title="English">
                     <span class="language-item">
                         <img alt="English" class="flag"
-                             src="/img/flags/denmark.png"/>
+                             src="/public/img/flags/denmark.png"/>
                       <span class="is-size-6 pl-3">Danish</span>
                     </span>
                     </a>
@@ -56,7 +56,7 @@
                        title="English">
                     <span class="language-item">
                         <img alt="English" class="flag"
-                             src="/img/flags/netherlands.png"/>
+                             src="/public/img/flags/netherlands.png"/>
                       <span class="has-text-white is-size-6 pl-3">Dutch</span>
                     </span>
                     </a>
@@ -66,7 +66,7 @@
                        title="English">
                     <span class="language-item">
                         <img alt="English" class="flag"
-                             src="/img/flags/united-kingdom.png"/>
+                             src="/public/img/flags/united-kingdom.png"/>
                       <span class="has-text-white is-size-6 pl-3">English</span>
                     </span>
                     </a>
@@ -76,7 +76,7 @@
                        title="English">
                     <span class="language-item">
                         <img alt="English" class="flag"
-                             src="/img/flags/finland.png"/>
+                             src="/public/img/flags/finland.png"/>
                       <span class="has-text-white is-size-6 pl-3">Finnish</span>
                     </span>
                     </a>
@@ -89,7 +89,7 @@
                        title="English">
                     <span class="language-item">
                         <img alt="English" class="flag"
-                             src="/img/flags/france.png"/>
+                             src="/public/img/flags/france.png"/>
                       <span class="has-text-white is-size-6 pl-3">French</span>
                     </span>
                     </a>
@@ -99,7 +99,7 @@
                        title="English">
                     <span class="language-item">
                         <img alt="English" class="flag"
-                             src="/img/flags/germany.png"/>
+                             src="/public/img/flags/germany.png"/>
                       <span class="has-text-white is-size-6 pl-3">German</span>
                     </span>
                     </a>
@@ -108,7 +108,7 @@
                     <a href="#" title="English">
                     <span class="language-item">
                         <img alt="Greek" class="flag"
-                             src="/img/flags/greece.png"/>
+                             src="/public/img/flags/greece.png"/>
                       <span class="has-text-white is-size-6 pl-3">Greek</span>
                     </span>
                     </a>
@@ -177,11 +177,16 @@ export default {
     }
   },
 
+  mounted() {
+    console.log("updated file")
+  },
+
   methods: {
 
     toggleModal() {
       this.modal["is-active"] = !this.modal["is-active"]
     }
+
 
   }
 }
