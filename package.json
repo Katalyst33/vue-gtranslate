@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "katalyst",
   "scripts": {
-    "publish": "npm version patch && npm publish"
+    "update-publish": "npm version patch && npm publish"
   },
   "license": "MIT",
   "repository": "https://github.com/Katalyst33/vue-gtranslate.git",
