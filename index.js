@@ -1,3 +1,3 @@
-import Translator from "./Translator"
+import Translator from "./Translator-old"
 
 export default Translator;

@@ -19,102 +19,20 @@
             <div>
               <div class="columns">
                 <div class="column">
-                  <div class="lang__box my-3" onclick="doGTranslate('en|zh-CN');return false;">
-                    <a href="#"
-                       title="English">
+                  <template v-for="item in country">
+                    <div :key="item.id">
+                      <div class="my-3" @click="doTranslation(item.code)">
+                        <a :title="item.alt"
+                           href="#">
                     <span class="language-item">
-                        <img alt="Chinese" class="flag"
-                             src="/public/img/flags/china.png"/>
-                      <span class="is-size-6 pl-3">Chinese (Simplified)</span>
+                        <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/${item.img}`"
+                             class="flag"/>
+                      <span class="is-size-6 pl-3">{{ item.title }}</span>
                     </span>
-                    </a>
-                  </div>
-                  <div class="my-3" onclick="doGTranslate('en|zh-TW');return false;">
-                    <a href="#"
-                       title="English">
-                    <span class="language-item">
-                        <img alt="Chinese(Traditional)" class="flag"
-                             src="/public/img/flags/china-traditional.png"/>
-                      <span class="is-size-6 pl-3">Chinese(Traditional)</span>
-                    </span>
-                    </a>
-                  </div>
-                  <div class="my-3" onclick="doGTranslate('en|da');return false;">
-                    <a href="#"
-                       title="English">
-                    <span class="language-item">
-                        <img alt="English" class="flag"
-                             src="/public/img/flags/denmark.png"/>
-                      <span class="is-size-6 pl-3">Danish</span>
-                    </span>
-                    </a>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="lang__box my-3" onclick="doGTranslate('en|en');return false;">
-                    <a href="#"
-                       title="English">
-                    <span class="language-item">
-                        <img alt="English" class="flag"
-                             src="/public/img/flags/netherlands.png"/>
-                      <span class="has-text-white is-size-6 pl-3">Dutch</span>
-                    </span>
-                    </a>
-                  </div>
-                  <div class="lang__box my-3" onclick="doGTranslate('en|en');return false;">
-                    <a href="#"
-                       title="English">
-                    <span class="language-item">
-                        <img alt="English" class="flag"
-                             src="/public/img/flags/united-kingdom.png"/>
-                      <span class="has-text-white is-size-6 pl-3">English</span>
-                    </span>
-                    </a>
-                  </div>
-                  <div class="lang__box my-3" onclick="doGTranslate('en|fi');return false;">
-                    <a href="#"
-                       title="English">
-                    <span class="language-item">
-                        <img alt="English" class="flag"
-                             src="/public/img/flags/finland.png"/>
-                      <span class="has-text-white is-size-6 pl-3">Finnish</span>
-                    </span>
-                    </a>
-                  </div>
-                </div>
-                <div class="column">
-
-                  <div class="my-3" onclick="doGTranslate('en|fr');return false;">
-                    <a href="#"
-                       title="English">
-                    <span class="language-item">
-                        <img alt="English" class="flag"
-                             src="/public/img/flags/france.png"/>
-                      <span class="has-text-white is-size-6 pl-3">French</span>
-                    </span>
-                    </a>
-                  </div>
-                  <div class="my-3" onclick="doGTranslate('en|de');return false;">
-                    <a href="#"
-                       title="English">
-                    <span class="language-item">
-                        <img alt="English" class="flag"
-                             src="/public/img/flags/germany.png"/>
-                      <span class="has-text-white is-size-6 pl-3">German</span>
-                    </span>
-                    </a>
-                  </div>
-                  <div class="my-3" onclick="doGTranslate('en|el');return false;">
-                    <a href="#" title="English">
-                    <span class="language-item">
-                        <img alt="Greek" class="flag"
-                             src="/public/img/flags/greece.png"/>
-                      <span class="has-text-white is-size-6 pl-3">Greek</span>
-                    </span>
-                    </a>
-                  </div>
-
-
+                        </a>
+                      </div>
+                    </div>
+                  </template>
                 </div>
 
 
@@ -144,48 +62,56 @@ export default {
       modal: {
         'is-active': false,
       },
-
-      options: [
+      country: [
         {
-          value: '',
-          title: 'Select Language',
-          icon: '',
+          code: 'en|zh-CN',
+          title: 'Chinese',
+          img: 'img/flags/china.png',
+          alt: 'Chinese'
         },
         {
-          value: 'en|af',
-          title: 'Afrikaans',
-          icon: '🇿🇦',
+          code: 'en|zh-TW',
+          title: 'Chinese (Simplified)',
+          img: 'img/flags/china-traditional.png',
+          alt: 'Chinese-traditional'
         },
         {
-          value: 'en|sq',
-          title: 'Albanian',
-          icon: '🇦🇱',
+          code: 'en|da',
+          title: 'Danish',
+          img: 'img/flags/denmark.png',
+          alt: 'denmark'
         },
         {
-          value: 'en|en',
+          code: 'en|en',
           title: 'English',
-          icon: '🇬🇧',
+          img: 'img/flags/united-kingdom.png',
+          alt: 'English'
         },
-        /*   {
-          value:'',
-          title:'',
-          icon:'',
-        },*/
+      ],
 
 
-      ]
     }
   },
 
   mounted() {
-    console.log("updated file")
+    console.log("flag location")
   },
 
   methods: {
 
     toggleModal() {
       this.modal["is-active"] = !this.modal["is-active"]
-    }
+    },
+
+    sayHi(data) {
+      alert(`Hey bro ${data}`)
+
+    },
+    doTranslation(code) {
+      window.doGTranslate(code)
+      this.toggleModal();
+      return false
+    },
 
 
   }
