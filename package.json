@@ -1,11 +1,11 @@
 {
   "name": "vue-gtranslate",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "gtranslate plugin for vue js",
   "main": "index.js",
   "author": "katalyst",
   "scripts": {
-    "publish":"npm version patch && npm publish"
+    "publish": "npm version patch && npm publish"
   },
   "license": "MIT",
   "repository": "https://github.com/Katalyst33/vue-gtranslate.git",
