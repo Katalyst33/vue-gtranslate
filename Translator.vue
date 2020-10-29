@@ -2,54 +2,34 @@
   <div>
 
 
+    <h3 @click="toggleModal">
+      Select a language
+    </h3>
     <div class="">
-      <h3 class="is-size-5" @click="toggleModal">
-        Select a language </h3>
-    </div>
+      <div class="row">
+        <div v-for="item in country" :key="item.id" class="column">
 
-    <div :class="modal" class="modal">
-      <div class="modal-background" @click="toggleModal"></div>
-      <div class="modal-content">
-
-        <div id="google_translate_element"></div>
-        <div>
-          <section class="section has-background-dark">
-            <div>
-              <div class="columns">
-                <div class="column">
-                  <template v-for="item in country">
-                    <div :key="item.id">
-                      <div class="my-3" @click="doTranslation(item.code)">
-                        <a :title="item.title"
-                           href="#">
+          <div @click="doTranslation(item.code)">
+            <a :title="item.title"
+               href="#">
                     <span class="language-item">
                       <!--  <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/_${item.title}.png`"
                              class="flag"/>-->
-                          <img :alt="item.alt" :src="`img/flags/_${item.title}.png`"
+                          <img :alt="item.alt" :src="`img/flags/__${item.title}.png`"
                                class="flag"/>
-                      <span class="is-size-6 pl-3">{{ item.title }}</span>
+
+                      <span class="language__text">{{ item.title }}</span>
                     </span>
-                        </a>
-                      </div>
-                    </div>
-                  </template>
-                </div>
-
-
-              </div>
-            </div>
-          </section>
-
-          <div id="google_translate_element2"></div>
+            </a>
+          </div>
 
         </div>
       </div>
-      <button class="modal-close is-large" @click="toggleModal">
-        <i class="fas fa-times is-size-3 has-text-white"></i>
-      </button>
+
+
+      <div id="google_translate_element2"></div>
+
     </div>
-
-
   </div>
 </template>
 
@@ -245,11 +225,6 @@ export default {
         {
           code: 'en|uk',
           title: 'Ukrainian',
-
-        },
-        {
-          code: '',
-          title: '',
         },
 
 
@@ -260,7 +235,7 @@ export default {
   },
 
   mounted() {
-    console.log("update images")
+    console.log("missing image")
   },
 
   methods: {
@@ -286,23 +261,64 @@ export default {
 
 <style scoped>
 
-.lang__link {
-  margin: 10px 0;
-}
 
+a:link {
+  text-decoration: none;
+  font-size: large;
+  cursor: pointer;
+}
+a:hover{
+  text-decoration: underline;
+}
 
 .language-item {
   display: flex;
-  color: white;
+
+}
+
+.language__text {
+  color: black;
+
+  margin-top: 7px;
+  padding-left: 5px;
+  text-decoration: none;
 }
 
 
 .flag {
-  height: 24px;
-  width: 24px;
+  height: 40px;
+
 }
 
 h3 {
   cursor: pointer;
 }
+
+/*//columns*/
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 20%;
+  padding: 10px;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 25%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
 </style>
