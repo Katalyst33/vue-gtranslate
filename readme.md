@@ -2,7 +2,7 @@
 
 ## Project setup
 ```sh
-yarn add vue-gtranslator
+yarn add vue-gtranslate
 ```
 
 ```html

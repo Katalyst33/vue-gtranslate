@@ -23,10 +23,10 @@
                         <a :title="item.title"
                            href="#">
                     <span class="language-item">
-                        <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/_${item.title}.png`"
-                             class="flag"/>
-              <!--            <img :alt="item.alt" :src="`img/flags/_${item.title}.png`"
-                               class="flag"/>-->
+                      <!--  <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/_${item.title}.png`"
+                             class="flag"/>-->
+                          <img :alt="item.alt" :src="`img/flags/_${item.title}.png`"
+                               class="flag"/>
                       <span class="is-size-6 pl-3">{{ item.title }}</span>
                     </span>
                         </a>
