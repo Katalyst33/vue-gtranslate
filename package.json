@@ -9,11 +9,10 @@
   },
   "license": "MIT",
   "repository": "https://github.com/Katalyst33/vue-gtranslate.git",
-  "assets": [
-    {
-      "glob": "**/*",
-      "input": "./node_modules/vue-gtranslate/flags",
-      "output": "/public/"
-    }
+  "keywords": [
+    "translator",
+    "vue js",
+    "gtranslate",
+    "google translate"
   ]
 }

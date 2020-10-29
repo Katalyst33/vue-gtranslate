@@ -14,19 +14,19 @@
         <div id="google_translate_element"></div>
         <div>
           <section class="section has-background-dark">
-
-
             <div>
               <div class="columns">
                 <div class="column">
                   <template v-for="item in country">
                     <div :key="item.id">
                       <div class="my-3" @click="doTranslation(item.code)">
-                        <a :title="item.alt"
+                        <a :title="item.title"
                            href="#">
                     <span class="language-item">
-                        <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/${item.img}`"
+                        <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/_${item.title}.png`"
                              class="flag"/>
+              <!--            <img :alt="item.alt" :src="`img/flags/_${item.title}.png`"
+                               class="flag"/>-->
                       <span class="is-size-6 pl-3">{{ item.title }}</span>
                     </span>
                         </a>
@@ -64,29 +64,195 @@ export default {
       },
       country: [
         {
+          code: 'en|af',
+          title: 'Afrikaans',
+        },
+        {
+          code: 'en|sq',
+          title: 'Albanian',
+        },
+        {
+          code: 'en|ar',
+          title: 'Arabic',
+        },
+        {
+          code: 'en|hy',
+          title: 'Armenian',
+        },
+        {
+          code: 'en|az',
+          title: 'Azerbaijani',
+        },
+        {
+          code: 'en|eu',
+          title: 'Basque',
+        },
+        {
+          code: 'en|be',
+          title: 'Belarusian',
+        },
+        {
+          code: 'en|bg',
+          title: 'Bulgarian',
+        },
+        {
+          code: 'en|ca',
+          title: 'Catalan',
+        },
+        {
           code: 'en|zh-CN',
-          title: 'Chinese',
-          img: 'img/flags/china.png',
-          alt: 'Chinese'
+          title: 'Chinese (Simplified)',
         },
         {
           code: 'en|zh-TW',
-          title: 'Chinese (Simplified)',
-          img: 'img/flags/china-traditional.png',
-          alt: 'Chinese-traditional'
+          title: 'Chinese (Traditional)',
         },
+        {
+          code: 'en|hr',
+          title: 'Croatian',
+        },
+        {
+          code: 'en|cs',
+          title: 'Czech',
+        },
+
         {
           code: 'en|da',
           title: 'Danish',
-          img: 'img/flags/denmark.png',
-          alt: 'denmark'
+        },
+        {
+          code: 'en|nl',
+          title: 'Dutch',
         },
         {
           code: 'en|en',
           title: 'English',
-          img: 'img/flags/united-kingdom.png',
-          alt: 'English'
         },
+        {
+          code: 'en|et',
+          title: 'Estonian',
+        },
+        {
+          code: 'en|tl',
+          title: 'Filipino',
+
+        },
+        {
+          code: 'en|fi',
+          title: 'Finnish',
+
+        },
+        {
+          code: 'en|fr',
+          title: 'French',
+        },
+
+        {
+          code: 'en|de',
+          title: 'German',
+
+        },
+        {
+          code: 'en|el',
+          title: 'Greek',
+
+        },
+        {
+          code: 'en|hu',
+          title: 'Hungarian',
+
+        },
+        {
+          code: 'en|id',
+          title: 'Indonesian',
+
+        },
+        {
+          code: 'en|ga',
+          title: 'Irish',
+
+        },
+        {
+          code: 'en|it',
+          title: 'Italian',
+
+        },
+        {
+          code: 'en|ja',
+          title: 'Japanese',
+
+        },
+        {
+          code: 'en|ko',
+          title: 'Korean',
+
+        },
+        {
+          code: 'en|lt',
+          title: 'Lithuanian',
+
+        },
+        {
+          code: 'en|ms',
+          title: 'Malay',
+
+        },
+        {
+          code: 'en|no',
+          title: 'Norwegian',
+
+        },
+        {
+          code: 'en|pl',
+          title: 'Polish',
+
+        },
+
+        {
+          code: 'en|pt',
+          title: 'Portuguese',
+
+        },
+        {
+          code: '"en|ro',
+          title: 'Romanian',
+
+        },
+        {
+          code: 'en|ru',
+          title: 'Russian',
+
+        },
+        {
+          code: 'en|es',
+          title: 'Spanish',
+
+        },
+        {
+          code: 'en|sv',
+          title: 'Swedish',
+
+        },
+        {
+          code: 'en|th',
+          title: 'Thai',
+
+        },
+        {
+          code: 'en|tr',
+          title: 'Turkish',
+        },
+        {
+          code: 'en|uk',
+          title: 'Ukrainian',
+
+        },
+        {
+          code: '',
+          title: '',
+        },
+
+
       ],
 
 
@@ -94,7 +260,7 @@ export default {
   },
 
   mounted() {
-    console.log("flag location")
+    console.log("update images")
   },
 
   methods: {
