@@ -12,6 +12,7 @@
           <div @click="doTranslation(item.code)">
             <a :title="item.title"
                href="#">
+
                     <span class="language-item">
                         <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/__${item.title}.png`"
                              class="flag"/>
