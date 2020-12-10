@@ -3,16 +3,14 @@
 
 
     <h3 @click="toggleModal">
-      Select a language
+      Select a languages
     </h3>
     <div class="">
       <div class="row">
         <div v-for="item in country" :key="item.id" class="column">
 
-          <div @click="doTranslation(item.code)">
-            <a :title="item.title"
+            <a @click="doTranslation(item.code)" :title="item.title"
                href="#">
-
                     <span class="language-item">
                         <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/__${item.title}.png`"
                              class="flag"/>
@@ -22,7 +20,6 @@
                       <span class="language__text">{{ item.title }}</span>
                     </span>
             </a>
-          </div>
 
         </div>
       </div>
