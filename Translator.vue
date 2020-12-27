@@ -35,6 +35,7 @@
 import "./translator.css"
 
 export default {
+  name:"TranslateCompnent",
   data() {
     return {
       modal: {
