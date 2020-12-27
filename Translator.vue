@@ -35,7 +35,7 @@
 import "./translator.css"
 
 export default {
-  name:"TranslateCompnent",
+  name:"TranslateComponent",
   data() {
     return {
       modal: {
@@ -234,7 +234,7 @@ export default {
   },
 
   mounted() {
-    console.log("missing image")
+    console.log("sync 100%")
   },
 
   methods: {
@@ -248,6 +248,7 @@ export default {
 
     },
     doTranslation(code) {
+      console.log(code)
       window.doGTranslate(code)
       this.toggleModal();
       return false
