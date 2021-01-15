@@ -234,7 +234,8 @@ export default {
   },
 
   mounted() {
-    console.log("sync 100%")
+    console.log("sync 200%")
+    console.log(window)
   },
 
   methods: {
@@ -243,10 +244,7 @@ export default {
       this.modal["is-active"] = !this.modal["is-active"]
     },
 
-    sayHi(data) {
-      alert(`Hey bro ${data}`)
 
-    },
     doTranslation(code) {
       console.log(code)
       window.doGTranslate(code)
