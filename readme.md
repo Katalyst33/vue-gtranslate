@@ -8,6 +8,7 @@ npm i vue-gtranslate
 
 ####Caution
 - Add Translate.css  to ensure it works on all pages
+- Plugin may be unstable sometimes, expect bugs
 
 ###Features
 - On the Fly page translation

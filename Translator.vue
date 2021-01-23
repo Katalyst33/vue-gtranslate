@@ -238,10 +238,13 @@ export default {
 
 
     doTranslation(code) {
-      console.log(code)
-      window.doGTranslate(code)
 
-      this.window.location.reload();
+     window.doGTranslate(code)
+
+
+      setTimeout( ()=>{
+        this.window.location.reload()
+      },2000 )
 
       return false
     },
