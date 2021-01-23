@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div>
 
@@ -9,8 +10,8 @@
       <div class="row">
         <div v-for="item in country" :key="item.id" class="column">
 
-            <a @click="doTranslation(item.code)" :title="item.title"
-               href="#">
+          <a @click="doTranslation(item.code)" :title="item.title"
+             href="#">
                     <span class="language-item">
                         <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/__${item.title}.png`"
                              class="flag"/>
@@ -19,7 +20,7 @@
 
                       <span class="language__text">{{ item.title }}</span>
                     </span>
-            </a>
+          </a>
 
         </div>
       </div>
@@ -235,7 +236,7 @@ export default {
 
   mounted() {
     console.log("sync 300%")
-    this.doTranslation()
+
 
   },
 

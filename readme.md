@@ -5,7 +5,16 @@
 yarn add vue-gtranslate
 ```
 
+```sh
+npm i vue-gtranslate
+```
+### Demo
+
+
+
 ```html
+Add the script to the head of your index.html file
+
  <script type="text/javascript"
               src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
