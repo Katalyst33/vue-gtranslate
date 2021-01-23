@@ -285,7 +285,7 @@ a:hover{
 
 
 .flag {
-  height: 40px;
+  height: 41px;
 
 }
 
