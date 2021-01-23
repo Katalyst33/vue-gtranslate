@@ -235,7 +235,8 @@ export default {
 
   mounted() {
     console.log("sync 300%")
-    console.log(window.doGTranslate)
+    this.doTranslation()
+
   },
 
   methods: {

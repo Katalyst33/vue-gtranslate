@@ -5,7 +5,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+
+  mounted(){
+    this.runTest()
+  },
+
+  methods:{
+    runTest(){
+      console.log("Home Back woods")
+    }
+  }
+}
 </script>
 
 <style scoped>
