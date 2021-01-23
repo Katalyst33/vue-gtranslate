@@ -3,9 +3,6 @@
   <div>
 
 
-    <h3 @click="toggleModal">
-      Select a languages
-    </h3>
     <div class="">
       <div class="row">
         <div v-for="item in country" :key="item.id" class="column">
@@ -33,7 +30,6 @@
 </template>
 
 <script>
-import "./translator.css"
 
 export default {
   name:"TranslateComponent",
@@ -234,23 +230,19 @@ export default {
     }
   },
 
-  mounted() {
-    console.log("sync 300%")
 
-
-  },
 
   methods: {
 
-    toggleModal() {
-      this.modal["is-active"] = !this.modal["is-active"]
-    },
+
 
 
     doTranslation(code) {
       console.log(code)
       window.doGTranslate(code)
-      this.toggleModal();
+
+      this.window.location.reload();
+
       return false
     },
 
