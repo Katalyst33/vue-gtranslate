@@ -2,8 +2,6 @@
 <template>
   <div>
 
-   <h4> I want  cake</h4>
-
     <div class="">
       <div class="row">
         <div v-for="item in country" :key="item.id" class="column">
