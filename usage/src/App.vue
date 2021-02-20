@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <Translator/>
   </div>
 </template>
