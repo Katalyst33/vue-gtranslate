@@ -1,6 +1,6 @@
 {
   "name": "vue-gtranslate",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "description": "gtranslate plugin for vue js",
   "main": "index.js",
   "author": "katalyst",
