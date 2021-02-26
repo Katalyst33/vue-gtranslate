@@ -15,7 +15,7 @@ import "vue-gtranslate/translator.css"
 export default {
   name: 'App',
   components: {
-    Translator
+    Translator,
   }
 }
 </script>
