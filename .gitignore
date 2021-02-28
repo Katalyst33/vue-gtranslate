@@ -38,6 +38,7 @@ coverage
 # nyc test coverage
 .nyc_output
 /Translator2.vue
+.eslintrc.js
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 

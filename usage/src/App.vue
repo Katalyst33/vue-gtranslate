@@ -1,6 +1,8 @@
 <template>
   <div id="app">
 
+    <h3>I love ice cream</h3>
+
     <Translator/>
   </div>
 </template>

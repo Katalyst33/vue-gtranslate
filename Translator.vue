@@ -2,11 +2,10 @@
 <template>
   <div>
 
+                  <div class="grid md:grid-cols-2 lg:grid-cols-3  p-4 shadow m-4 rounded-lg">
+             <div v-for="item in country"  class="py-2" :key="item.id">
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3  p-4 shadow m-4 rounded-lg">
-        <div v-for="item in country"  class="py-2" :key="item.id">
-
-          <a @click="doTranslation(item.code)" :title="item.title"
+                     <a @click="doTranslation(item.code)" :title="item.title"
              href="#">
                     <span class="language-item">
                         <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/__${item.title}.png`"
@@ -240,6 +239,7 @@ export default {
 
       setTimeout( ()=>{
         this.window.location.reload()
+        this.$router.push({name:'Home'})
       },2000 )
 
       return false

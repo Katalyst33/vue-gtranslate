@@ -2,17 +2,21 @@
   "name": "vue-gtranslate",
   "version": "2.0.16",
   "description": "gtranslate plugin for vue js",
-  "main": "index.js",
   "author": "katalyst",
   "scripts": {
+    "lint": "vue-cli-service lint",
     "update-publish": "npm version patch && npm publish"
   },
-  "license": "MIT",
-  "repository": "https://github.com/Katalyst33/vue-gtranslate.git",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  },
   "keywords": [
     "translator",
     "vue js",
     "gtranslate",
     "google translate"
-  ]
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/Katalyst33/vue-gtranslate.git"
 }
