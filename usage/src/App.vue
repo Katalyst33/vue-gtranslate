@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Translator from "../../Translator";
+import Translator from "vue-gtranslate";
 import "vue-gtranslate/translator.css"
 
 export default {
