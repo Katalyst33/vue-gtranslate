@@ -1,25 +1,24 @@
 /* eslint-disable */
 <template>
   <div>
+    <div class="">
+      <div v-for="item in country" class="py-2" :key="item.id">
 
-                  <div class="grid md:grid-cols-2 lg:grid-cols-3  p-4 shadow m-4 rounded-lg">
-             <div v-for="item in country"  class="py-2" :key="item.id">
-
-                     <a @click="doTranslation(item.code)" :title="item.title"
-             href="#">
+        <a @click="doTranslation(item.code)" :title="item.title"
+           href="#">
                     <span class="language-item">
-                        <img :alt="item.alt" :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/__${item.title}.png`"
+                        <img :alt="item.alt"
+                             :src="`https://cdn.jsdelivr.net/npm/vue-gtranslate/img/flags/__${item.title}.png`"
                              class="flag"/>
 
                       <span class="language__text">{{ item.title }}</span>
                     </span>
-          </a>
+        </a>
 
-        </div>
       </div>
+    </div>
 
-
-      <div id="google_translate_element2"></div>
+    <div id="google_translate_element2"></div>
 
   </div>
 </template>
@@ -27,7 +26,7 @@
 <script>
 
 export default {
-  name:"TranslateComponent",
+  name: "TranslateComponent",
   data() {
     return {
       modal: {
@@ -35,215 +34,207 @@ export default {
       },
       country: [
         {
-          code: 'en|af',
-          title: 'Afrikaans',
+          code: "af",
+          title: "Afrikaans"
         },
         {
-          code: 'en|sq',
-          title: 'Albanian',
+          code: "sq",
+          title: "Albanian"
         },
         {
-          code: 'en|ar',
-          title: 'Arabic',
+          code: "ar",
+          title: "Arabic"
         },
         {
-          code: 'en|hy',
-          title: 'Armenian',
+          code: "hy",
+          title: "Armenian"
         },
         {
-          code: 'en|az',
-          title: 'Azerbaijani',
+          code: "az",
+          title: "Azerbaijani"
         },
         {
-          code: 'en|eu',
-          title: 'Basque',
+          code: "eu",
+          title: "Basque"
         },
         {
-          code: 'en|be',
-          title: 'Belarusian',
+          code: "be",
+          title: "Belarusian"
         },
         {
-          code: 'en|bg',
-          title: 'Bulgarian',
+          code: "bg",
+          title: "Bulgarian"
         },
         {
-          code: 'en|ca',
-          title: 'Catalan',
+          code: "ca",
+          title: "Catalan"
         },
         {
-          code: 'en|zh-CN',
-          title: 'Chinese (Simplified)',
+          code: "zh-CN",
+          title: "Chinese (Simplified)"
         },
         {
-          code: 'en|zh-TW',
-          title: 'Chinese (Traditional)',
+          code: "zh-TW",
+          title: "Chinese (Traditional)"
         },
         {
-          code: 'en|hr',
-          title: 'Croatian',
+          code: "hr",
+          title: "Croatian"
         },
         {
-          code: 'en|cs',
-          title: 'Czech',
+          code: "cs",
+          title: "Czech"
         },
 
         {
-          code: 'en|da',
-          title: 'Danish',
+          code: "da",
+          title: "Danish"
         },
         {
-          code: 'en|nl',
-          title: 'Dutch',
+          code: "nl",
+          title: "Dutch"
         },
         {
-          code: 'en|en',
-          title: 'English',
+          code: "en",
+          title: "English"
         },
         {
-          code: 'en|et',
-          title: 'Estonian',
+          code: "et",
+          title: "Estonian"
         },
         {
-          code: 'en|tl',
-          title: 'Filipino',
-
+          code: "tl",
+          title: "Filipino"
         },
         {
-          code: 'en|fi',
-          title: 'Finnish',
-
+          code: "fi",
+          title: "Finnish"
         },
         {
-          code: 'en|fr',
-          title: 'French',
+          code: "fr",
+          title: "French"
         },
 
         {
-          code: 'en|de',
-          title: 'German',
-
+          code: "de",
+          title: "German"
         },
         {
-          code: 'en|el',
-          title: 'Greek',
-
+          code: "el",
+          title: "Greek"
         },
         {
-          code: 'en|hu',
-          title: 'Hungarian',
-
+          code: "hu",
+          title: "Hungarian"
         },
         {
-          code: 'en|id',
-          title: 'Indonesian',
-
+          code: "id",
+          title: "Indonesian"
         },
         {
-          code: 'en|ga',
-          title: 'Irish',
-
+          code: "ga",
+          title: "Irish"
         },
         {
-          code: 'en|it',
-          title: 'Italian',
-
+          code: "it",
+          title: "Italian"
         },
         {
-          code: 'en|ja',
-          title: 'Japanese',
-
+          code: "ja",
+          title: "Japanese"
         },
         {
-          code: 'en|ko',
-          title: 'Korean',
-
+          code: "ko",
+          title: "Korean"
         },
         {
-          code: 'en|lt',
-          title: 'Lithuanian',
-
+          code: "lt",
+          title: "Lithuanian"
         },
         {
-          code: 'en|ms',
-          title: 'Malay',
-
+          code: "ms",
+          title: "Malay"
         },
         {
-          code: 'en|no',
-          title: 'Norwegian',
-
+          code: "no",
+          title: "Norwegian"
         },
         {
-          code: 'en|pl',
-          title: 'Polish',
-
-        },
-
-        {
-          code: 'en|pt',
-          title: 'Portuguese',
-
+          code: "pl",
+          title: "Polish"
         },
         {
-          code: '"en|ro',
-          title: 'Romanian',
-
+          code: "pt",
+          title: "Portuguese"
         },
         {
-          code: 'en|ru',
-          title: 'Russian',
-
+          code: '"ro',
+          title: "Romanian"
         },
         {
-          code: 'en|es',
-          title: 'Spanish',
-
+          code: "ru",
+          title: "Russian"
         },
         {
-          code: 'en|sv',
-          title: 'Swedish',
-
+          code: "es",
+          title: "Spanish"
         },
         {
-          code: 'en|th',
-          title: 'Thai',
-
+          code: "sv",
+          title: "Swedish"
         },
         {
-          code: 'en|tr',
-          title: 'Turkish',
+          code: "th",
+          title: "Thai"
         },
         {
-          code: 'en|uk',
-          title: 'Ukrainian',
+          code: "tr",
+          title: "Turkish"
         },
+        {
+          code: "uk",
+          title: "Ukrainian"
+        }
+      ]
+    }
+  },
 
-
-      ],
-
-
+  computed: {
+    currentRouteName() {
+      if (this.$route.path === "/") {
+        return `${this.$route.path}`;
+      } else {
+        return `${this.$route.path}/`;
+      }
     }
   },
 
 
 
+
   methods: {
 
-
-
-
     doTranslation(code) {
+      // localStorage.setItem("lang", code);
 
-     window.doGTranslate(code)
+      // const lang = localStorage.getItem("lang");
 
+      this.$router
+          .replace(`${this.currentRouteName}#googtrans(${code})`)
 
-      setTimeout( ()=>{
-        this.window.location.reload()
-        this.$router.push({name:'Home'})
-      },2000 )
+          .catch(err => {
+            return err;
+          });
 
-      return false
-    },
+      // this.$router.replace();
+      window.location.reload();
+
+      setTimeout(() => {
+        // window.location.reload();
+      }, 500);
+
+      return false;
+    }
 
 
   }
@@ -258,58 +249,27 @@ a:link {
   font-size: large;
   cursor: pointer;
 }
-a:hover{
+
+a:hover {
   text-decoration: underline;
 }
 
 .language-item {
   display: flex;
+  align-items: center;
 
-}
-
-.language__text {
-  color: black;
-
-  margin-top: 7px;
-  padding-left: 5px;
-  text-decoration: none;
 }
 
 
 .flag {
   height: 40px;
-
 }
 
 h3 {
   cursor: pointer;
 }
 
-/*//columns*/
-/* Container for flexboxes */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-/* Create four equal columns */
-.column {
-  flex: 20%;
-  padding: 10px;
-}
 
-/* On screens that are 992px wide or less, go from four columns to two columns */
-@media screen and (max-width: 992px) {
-  .column {
-    flex: 25%;
-  }
-}
-
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .row {
-    flex-direction: column;
-  }
-}
 
 </style>
